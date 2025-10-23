@@ -76,7 +76,6 @@ For future scalability or in highly distributed environments requiring determini
 
 <br>
 
-***
 ## 5. Project Structure and Modularity 📂
 
 This repository serves as the **super-repository** for the EdgeCV4Safety project, utilizing Git Submodules to maintain strict modularity between the processing and control components.
@@ -99,7 +98,7 @@ The complete system is divided into two distinct, independently managed componen
 To clone the main repository and **automatically download the contents of both submodules**, use the `--recurse-submodules` flag:
 
 ```bash
-git clone --recurse-submodules [https://github.com/justwhiteecode/EdgeCV4Safety.git](https://github.com/justwhiteecode/EdgeCV4Safety.git)
+git clone --recurse-submodules https://github.com/justwhiteecode/EdgeCV4Safety.git
 cd EdgeCV4Safety
 ```
 
