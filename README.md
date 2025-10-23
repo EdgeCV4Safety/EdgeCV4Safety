@@ -26,9 +26,9 @@ For flexible and high-performance monitoring, the system utilizes **Industrial C
 
 Effective workspace monitoring requires sophisticated data processing. This computation is realized on powerful hardware situated **on-site**, leveraging the **Edge Computing** paradigm to guarantee the low-latency required for real-time safety.
 
-* **Human Recognition:** A **fast and efficient object detection model (e.g., YOLOv8 or similar)** identifies the presence of personnel.
-* **Contextual Awareness:** **High-performance ONNX depth estimation models (e.g., UniDepth v2 or DepthAnything v2)** are used to calculate distances, enabling more granular control responses.
-* **Hardware & Portability:** By converting models to the **ONNX runtime format**, we ensure **hardware-agnostic deployment**. The system is optimized to achieve the best performance with the available **dedicated Graphical Processing Units (GPUs)**.
+* **Human Recognition:** A **fast and efficient ONNX object detection model (YOLO11)** identifies the presence of personnel.
+* **Contextual Awareness:** **High-performance ONNX depth estimation models (UniDepth v2 or DepthAnything v2)** are used to calculate distances, enabling more granular control responses.
+* **Hardware & Portability:** By converting models to the **ONNX runtime format**, is ensured **hardware-agnostic deployment**. The system is optimized to achieve the best performance with the available hardware and optimisations.
 
 ### 2.3. Control and Action: The Safety Logic Core
 
