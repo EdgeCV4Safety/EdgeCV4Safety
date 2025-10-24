@@ -61,7 +61,7 @@ The functional flow illustrates the complete, contextually driven sequence from 
 <p align="center">
   <img src="assets/flow_pipeline.png" alt="Functional Flow Pipeline"/>
   <br>
-  <i>Fig. 14 - Functional Flow of the Architecture.</i>
+  <i>Fig. 2 - Functional Flow of the Architecture.</i>
 </p>
 
 
