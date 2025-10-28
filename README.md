@@ -1,3 +1,9 @@
+
+
+<p align="center">
+  <img src="assets/EdgeCV4Safety_logo.png" alt="EdgeCV4Safety Logo" width="18%"/>
+</p>
+
 # EdgeCV4Safety: AI-Driven Contextual Safety System for Industry 4.0/5.0
 
 <br>
