@@ -93,6 +93,12 @@ The complete system is divided into two distinct, independently managed componen
 | **Vision Processing** | Code for camera interfacing, Deep Learning inference (YOLO, UniDepth/DepthAnything), and safety zone determination. | `vision_processing/` | [GitHub Repository: Vision](https://github.com/justwhiteecode/EdgeCV4Safety-Vision) |
 | **Robot Controller** | Logic for decision-making, speed calculation, and communication with the Universal Robots arm via RTDE protocol. | `robot_controller/` | [GitHub Repository: Controller](https://github.com/justwhiteecode/EdgeCV4Safety-Controller) |
 
+<p align="center">
+  <img src="assets/EdgeCV4Safety_submodules.png" alt="EdgeCV4Safety Submodules" width="60%"/>
+  <br>
+  <i>Fig. 3 - Project Submodules.</i>
+</p>
+
 *The specific documentation for each submodule is available on respective pages.*
 
 <br>
