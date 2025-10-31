@@ -1,6 +1,6 @@
 [submodule "vision_processing"]
 	path = vision_processing
-	url = git@github.com:justwhiteecode/EdgeCV4Safety-Vision.git
+	url = git@github.com:EdgeCV4Safety/EdgeCV4Safety-Vision.git
 [submodule "robot_controller"]
 	path = robot_controller
-	url = git@github.com:justwhiteecode/EdgeCV4Safety-Controller.git
+	url = git@github.com:EdgeCV4Safety/EdgeCV4Safety-Controller.git
