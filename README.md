@@ -56,7 +56,7 @@ The overall system architecture is conceptually represented below, illustrating 
 <p align="center">
   <img src="assets/general_architecture.png" alt="General System Architecture Diagram"/>
   <br>
-  <i>Fig. 13 - General System Architecture.</i>
+  <i>Fig. 1 - General System Architecture.</i>
 </p>
 Figure 1 illustrates a single compute node for clarity. For enhanced scalability, modularity, and to reduce the computational load on the CV system, the architecture is designed to support a dedicated decision-making node.
 
