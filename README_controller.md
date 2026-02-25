@@ -75,6 +75,45 @@ python3 SlowedSpeedControllerUDP.py
 
 <br>
 
+## Tests and Performance 🚀
+
+The evaluation of the Controller sub-module focused on quantifying its computational load as a function of the Real-Time Data Exchange (RTDE) communication frequency. This parameter presents a fundamental trade-off: higher frequencies offer greater responsiveness and finer control at the cost of increased network traffic. Three operating frequencies were selected based on hardware limits: 30 Hz and 100 Hz as low-impact options, and 500 Hz as the maximum supported by the robotic arms used.
+
+All measurements were performed once the system reached a steady state, excluding initialization and setup times. Network latency was considered negligible, an assumption justified by the use of Time-Sensitive Networking (TSN), which ensures deterministic transit times in the microsecond range. For similar reasons, the actuation time of the RTDE protocol was also excluded from this analysis. All the tests were made on an Advantech UNO-148 with Ubuntu 22.
+
+### Resources usage
+
+The analysis confirms that the Controller has an extremely low computational overhead.
+
+- **CPU Usage**: As shown in Fig. 2, CPU load has a direct linear correlation with the RTDE frequency, scaling from an average of **0.7% at 30 Hz** to **3.0% at 500 Hz**. The high variance indicated by the error bars is an expected consequence of the module's software architecture. The main RTDE thread uses sleep cycles to maintain the target frequency, resulting in periods of near-total inactivity, while other processes are primarily I/O-bound (waiting for messages). This asynchronous, non-intensive nature explains both the low average usage and the significant fluctuations.
+- **Memory Usage**: The memory footprint is negligible and stable, consuming approximately **28 MB of RAM** regardless of the communication frequency. This is in stark contrast to the gigabytes required by the Vision sub-module.
+
+<p align="center">
+  <img src="assets/Controller_Total_cpu.png" alt="Controller CPU Usage" width="60%"/>
+  <br>
+  <i>Fig. 2 - Controller CPU Usage on Controller Node.</i>
+</p>
+
+### Cycle Time and Latency
+
+Performance analysis (Fig. 3) reveals that the sub-module's latency is entirely governed by the RTDE frequency's throttling mechanism, not by its computational workload.
+
+- The **minimum cycle times recorded** (between **0.250 ms** and **0.391 ms**) represent the true execution speed of the Controller's logic, demonstrating that the actual computation is extremely fast.
+- Conversely, the **maximum cycle times** observed (33.41 ms, 10.03 ms, and 2.92 ms) are directly correlated with the theoretical period of each frequency (33.3 ms, 10 ms, and 2 ms, respectively). These peaks do not represent long processing times but rather the sleep function waiting for nearly the entire cycle duration to maintain the desired rate in a worst-case scenario.
+
+The average cycle times remain below the target period, indicating that while OS jitter is present, the system successfully respects the configured communication frequency.
+
+<p align="center">
+  <img src="assets/Controller_Total_performance.png" alt="Controller Cycle Time" width="60%"/>
+  <br>
+  <i>Fig. 9 - Controller Cycle Time Analysis.</i>
+</p>
+
+### Conclusion on Controller Performance
+In conclusion, the evaluation of the Controller sub-module confirms its exceptional efficiency and negligible impact on overall system resources. With minimal CPU usage that scales predictably and a trivial memory footprint, it operates without competing for the resources required by the computationally intensive Vision sub-module. The performance analysis further underscores that the Controller is not a computational bottleneck; its latency is deliberately throttled by the RTDE frequency, while its core logic executes in the sub-millisecond range. Therefore, the Controller successfully fulfills its role as a lightweight, reliable, and non-intrusive communication bridge for the robotic system.
+
+<br>
+
 ---
 
 ## Credits 🤝
