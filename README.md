@@ -88,10 +88,10 @@ This repository serves as the **super-repository** for the EdgeCV4Safety project
 
 The complete system is divided into two distinct, independently managed components:
 
-| Component | Description | Local Directory | Repository Link |
-| :--- | :--- | :--- | :--- |
-| **Vision Processing** | Code for camera interfacing, Deep Learning inference (YOLO, UniDepth/DepthAnything), and safety zone determination. | `vision_processing/` | [GitHub Repository: Vision](https://github.com/justwhiteecode/EdgeCV4Safety-Vision) |
-| **Robot Controller** | Logic for decision-making, speed calculation, and communication with the Universal Robots arm via RTDE protocol. | `robot_controller/` | [GitHub Repository: Controller](https://github.com/justwhiteecode/EdgeCV4Safety-Controller) |
+| Component | Description | Local Directory | Repository Link | README |
+| :--- | :--- | :--- | :--- | :--- |
+| **Vision Processing** | Code for camera interfacing, Deep Learning inference (YOLO, UniDepth/DepthAnything), and safety zone determination. | `vision_processing/` | [GitHub Repository: Vision](https://github.com/justwhiteecode/EdgeCV4Safety-Vision) | [README_vision.md](https://github.com/EdgeCV4Safety/EdgeCV4Safety/blob/main/README_vision.md) |
+| **Robot Controller** | Logic for decision-making, speed calculation, and communication with the Universal Robots arm via RTDE protocol. | `robot_controller/` | [GitHub Repository: Controller](https://github.com/justwhiteecode/EdgeCV4Safety-Controller) | [README_controller.md](https://github.com/EdgeCV4Safety/EdgeCV4Safety/blob/main/README_controller.md) |
 
 <p align="center">
   <img src="assets/EdgeCV4Safety_submodules.png" alt="EdgeCV4Safety Submodules" width="60%"/>
@@ -99,7 +99,8 @@ The complete system is divided into two distinct, independently managed componen
   <i>Fig. 3 - Project Submodules.</i>
 </p>
 
-*The specific documentation for each submodule is available on respective pages.*
+> *The specific documentation for each submodule is available on respective pages.*\
+> _**Update**: now repos are private (due to law/contracts), but you can acces anyway to each README (migrated here, see table)._
 
 <br>
 
